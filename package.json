@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A real-time chat application using Node, Express & Socket.io",
   "main": "server.js",
+  "engines": {
+    "node": "10.15.1"
+  },
   "scripts": {
     "start": "node server",
     "dev": "nodemon server"
