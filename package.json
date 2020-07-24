@@ -4,11 +4,11 @@
   "description": "A real-time chat application using Node, Express & Socket.io",
   "main": "server.js",
   "engines": {
-    "node": "10.15.1"
+    "node": "12.x"
   },
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
