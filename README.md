@@ -3,7 +3,7 @@
 **Live Demo:** [Chat App](https://chat-app-vanilla-js.herokuapp.com/).
 
 ### Some features of the app:
-1.	Users will be able to join a chat room using a username (No authentication will be implemented)
+1.	Users will be able to join a chat room using a username (No authentication has been implemented for now)
 2.	Users will see a list of users in the current chat room
 3.	When a user sends a message all other users in that room will get the message instantly
 4.	When a user joins or leaves a room, other users will see a notification
