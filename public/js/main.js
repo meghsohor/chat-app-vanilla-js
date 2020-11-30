@@ -11,7 +11,7 @@ const {username, room} = Qs.parse(location.search, {
 socket.emit('joinRoom', { username, room});
 
 
-//Get the room and users from server
+//Listen for the event and Get the room and users from server
 socket.on('roomUsers', (({room, users}) => {
     //Updating the room name on the sidebar
     document.querySelector('#room-name').textContent = room;

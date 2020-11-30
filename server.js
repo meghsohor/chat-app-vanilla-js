@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Notify when a user connects
 io.on('connection', socket => {
+    // Listen for when a user joins a room
     socket.on('joinRoom', ({ username, room }) => {
         const user = userJoin(socket.id, username, room);
 
@@ -26,14 +27,14 @@ io.on('connection', socket => {
         //Broadcast when a user connects
         socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined.`));
 
-        //send users and room info
+        //send users and room info as an event payload to the frontend
         io.to(user.room).emit('roomUsers', {
             room: user.room,
             users: getRoomUsers(user.room)
         });
     });
 
-    //Listen for chatMessage
+    //Listen for when a user sends a message
     socket.on('chatMessage', (msg) => {
         const user = getCurrentUser(socket.id);
         //Emit the message to everybody
