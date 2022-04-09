@@ -22,7 +22,7 @@
   "homepage": "https://github.com/meghsohor/chat-app-vanilla-js#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
